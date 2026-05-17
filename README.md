@@ -11,7 +11,7 @@ TG 阿灵去广告（特殊版）
 
 📥 [下载去广告特别版](https://raw.githubusercontent.com/BaiLai7513/anti-fraud-block/main/%E5%8E%BB%E5%B9%BF%E5%91%8A-%E7%89%B9%E5%88%AB%E7%89%88(251216).zip)
 
-> 💡 下载通用版（屏蔽反诈模块）请点击 [v6 Release](https://github.com/BaiLai7513/anti-fraud-block/releases/download/v6/block_anti_fraud_v6.zip) 跳转下载。
+> 💡 下载仅属于ColorOS 定制（屏蔽反诈模块）请点击 [v6 Release](https://github.com/BaiLai7513/anti-fraud-block/releases/download/v6/block_anti_fraud_v6.zip) 跳转下载。
 
 ## 功能
 1. 屏蔽 ColorOS 内置反诈
