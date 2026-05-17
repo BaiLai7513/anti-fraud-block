@@ -27,9 +27,9 @@ su -c "sh /storage/emulated/0/Download/test_anti_fraud.sh"
 3 个 PASS 即为正常状态：
 
 ```
-[1/3] DNAT重定向: PASS ✓
-[2/3] IP DROP:     PASS ✓ (Operation not permitted)
-[3/3] 规则完整性:  PASS ✓ (DROP规则 213 条)
+[1/3] REDIRECT重定向: PASS ✓ (REDIRECT生效)
+[2/3] IP DROP:        PASS ✓ (内核级DROP)
+[3/3] 规则完整性:     PASS ✓ (DROP规则 ≥200 条)
 ```
 
 ## 免责声明
