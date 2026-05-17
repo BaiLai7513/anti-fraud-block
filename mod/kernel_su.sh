@@ -1,5 +1,5 @@
 
-id="anti_fraud_260516"
+id="anti_fraud_260517"
 Magisk_mod=$(grep -w -q 'lite_modules' /data/adb/magisk/util_functions.sh 2>/dev/null && echo "lite_modules" || echo "modules")
 MODPATH="/data/adb/$Magisk_mod/$id"
 
