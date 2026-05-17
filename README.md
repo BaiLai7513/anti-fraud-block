@@ -22,15 +22,7 @@ TG 阿灵去广告（特殊版）
 su -c "sh /storage/emulated/0/Download/test_anti_fraud.sh"
 ```
 
-### 预期结果
-
-3 个 PASS 即为正常状态：
-
-```
-[1/3] REDIRECT重定向: PASS ✓ (REDIRECT生效)
-[2/3] IP DROP:        PASS ✓ (内核级DROP)
-[3/3] 规则完整性:     PASS ✓ (DROP规则 ≥200 条)
-```
+三个 PASS 即为正常状态。
 
 ## 免责声明
 本模块仅用于中国大陆地区保护个人隐私使用，仅用于学习和交流，切勿用于非法用途。如有问题使用者承担法律责任，法律责任与模块开发者无关。
