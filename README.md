@@ -14,5 +14,33 @@ TG 阿灵去广告（特殊版）
 1. 下载 Release 版本并在 Magisk / KSU / APatch 中作为系统模块刷入
 2. 重启设备
 
+## 测试效果
+
+用 su 授权终端或 MT管理器/NP管理器等以 root 权限执行以下脚本：
+
+```sh
+#!/system/bin/sh
+# 反诈模块三功能效果测试
+# su -c "sh /storage/emulated/0/Download/anti_fraud_test.sh"
+
+cd /storage/emulated/0/Download
+sh /storage/emulated/0/Download/anti_fraud_test.sh
+exit
+```
+
+### 预期结果
+
+```
+====== 反诈模块效果测试 ======
+
+[1/3] DNAT重定向: PASS ✓
+[2/3] IP DROP:     PASS ✓ (Operation not permitted)
+[3/3] 规则完整性:  PASS ✓ (DROP规则 213 条)
+
+====== 测试完成 ======
+```
+
+三项全部 PASS 即代表模块生效。
+
 ## 免责声明
 本模块仅用于中国大陆地区保护个人隐私使用，仅用于学习和交流，切勿用于非法用途。如有问题使用者承担法律责任，法律责任与模块开发者无关。
