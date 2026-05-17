@@ -6,12 +6,12 @@ LOG="$MODDIR/module.log"
 
 echo "[$(date)] iptables.sh started" >> $LOG
 
-# ==== DNAT: 反诈应用流量重定向到127.0.0.1:8848 (不检测安装状态) ====
+# ==== REDIRECT: 反诈应用流量重定向到127.0.0.1:8848 (不检测安装状态) ====
 for pkg in com.hicorenational.antifraud com.coloros.phonemanager com.oplus.appdetail; do
     uid=$(grep "^${pkg} " /data/system/packages.list | awk '{print $2}')
-    iptables -t nat -D OUTPUT -m owner --uid-owner="$uid" -p tcp -j DNAT --to-destination 127.0.0.1:8848 2>>$LOG
-    iptables -t nat -I OUTPUT -m owner --uid-owner="$uid" -p tcp -j DNAT --to-destination 127.0.0.1:8848 >>$LOG 2>&1
-    echo "[$(date)] DNAT: $pkg (uid=${uid:-N/A}) -> 127.0.0.1:8848" >> $LOG
+    iptables -t nat -D OUTPUT -m owner --uid-owner="$uid" -p tcp -j REDIRECT --to-ports 8848 2>>$LOG
+    iptables -t nat -I OUTPUT -m owner --uid-owner="$uid" -p tcp -j REDIRECT --to-ports 8848 >>$LOG 2>&1
+    echo "[$(date)] REDIRECT: $pkg (uid=${uid:-N/A}) -> 127.0.0.1:8848" >> $LOG
 done
 
 # ==== IP DROP: 反诈相关IP ====
